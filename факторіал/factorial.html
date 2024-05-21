@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Обчислення факторіалу</title>
+</head>
+<body>
+    <script>
+        const number = parseInt(prompt("Введіть число для обчислення факторіалу:"));
+
+        if (isNaN(number) || number < 0) {
+            alert("Будь ласка, введіть коректне невід'ємне число.");
+        } else {
+            function factorial(n) {
+                if (n === 0 || n === 1) {
+                    return 1;
+                }
+                return n * factorial(n - 1);
+            }
+            const result = factorial(number);
+            alert(`Факторіал числа ${number} дорівнює ${result}`);
+        }
+    </script>
+</body>
+</html>

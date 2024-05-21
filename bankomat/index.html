@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+let money = prompt('Яку суму хочете зняти', '');
+
+if (money == null) {
+    alert('Ви відмінили операцію зняття грошей.');
+} else if (money < 50 || money > 3000) {
+    alert('На жаль, Ви можете зняти гроші на суму від 50 грн. до 3000 грн.');
+} else if (money % 50 != 0) {
+    alert('В банкоматі немає таких купюр!');
+    money = prompt('Яку суму хочете зняти', '');
+    if (money != null && money % 50 == 0) {
+        alert(`Заберіть ваші гроші: ${money} грн.`);
+    }
+} else {
+    alert(`Заберіть ваші гроші: ${money} грн.`);
+}
+    </script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Обчислення степеня</title>
+</head>
+<body>
+    <script>
+        const base = parseFloat(prompt("Введіть основу (число):"));
+        const exponent = parseFloat(prompt("Введіть показник степеня (число):"));
+
+        if (isNaN(base) || isNaN(exponent)) {
+            alert("Будь ласка, введіть коректні числові значення.");
+        } else {
+            const result = Math.pow(base, exponent);
+            alert(`Результат: ${base} в степені ${exponent} дорівнює ${result}`);
+        }
+    </script>
+</body>
+</html>

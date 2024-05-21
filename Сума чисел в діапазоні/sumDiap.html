@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Числа в діапазоні</title>
+</head>
+<body>
+    <script>
+        const start = parseInt(prompt("Введіть початок діапазону (число):"));
+        const end = parseInt(prompt("Введіть кінець діапазону (число):"));
+        if (isNaN(start) || isNaN(end)) {
+            alert("Будь ласка, введіть коректні числові значення.");
+        } else {
+            let numbersInRange = [];
+            let sum = 0;
+            for (let i = start; i <= end; i++) {
+                numbersInRange.push(i);
+                sum += i;
+            }
+            alert(`Числа в діапазоні від ${start} до ${end}: ${numbersInRange.join(', ')}`);
+            alert(`Сума чисел в діапазоні від ${start} до ${end} дорівнює ${sum}`);
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Рівень знань</title>
+</head>
+<body>
+    <script>
+        const grade = parseInt(prompt("Введіть вашу оцінку від 1 до 12:"));
+
+        if (isNaN(grade) || grade < 1 || grade > 12) {
+            alert("Будь ласка, введіть коректну оцінку від 1 до 12.");
+        } else {
+            let level;
+            if (grade >= 1 && grade <= 4) {
+                level = "низький";
+            } else if (grade >= 5 && grade <= 8) {
+                level = "середній";
+            } else if (grade >= 9 && grade <= 12) {
+                level = "високий";
+            }
+            alert(`Ваш рівень знань: ${level}`);
+        }
+    </script>
+</body>
+</html>
